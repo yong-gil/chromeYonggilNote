@@ -1,0 +1,27 @@
+<div id="main_body">
+    <div id="youtube_vedio">
+        <iframe  id="youtubePlayer" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+    </div>
+    <div id="note_memo_main" class="note_memo_main_css">
+        <form id="note_body" class="note_body_css" contenteditable="true">
+            <!-- <input type="text" width="100%" placeholder="제목을 입력하세요." style="z-index: 999;"> -->
+            <!--노트내용을 보여준다.-->
+        </form>
+    </div>
+    <!--버튼컨트롤러.-->
+    <div id="note_memo_btns" class="note_memo_btns_css">
+        <button id="save_btn" class="save_btn_css">
+            <input type="image" src="image/save.png" class="save_img" title="저장(Ctrl+q)">
+        </button>  
+        <button id="delete_btn" class="capture_btn_css">
+            <input type="image" src="image/delete.png" class="capture_img" title="삭제(Ctrl+d)">
+        </button>
+        <button id="capture_btn" class="capture_btn_css">
+            <input type="image" src="image/capture.png" class="capture_img" title="캡처(Ctrl+`)">
+        </button>
+        <button id="exit_btn" class="exit_btn_css">
+            <input type="image" src="image/exit.png" class="capture_img" title="닫기">
+        </button>
+        <input type="text" id="dataSize"/>
+    </div>
+</div>

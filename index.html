@@ -1,0 +1,60 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type = "text/javascript" src = "js/jquery-latest.min.js"></script> 
+        <script type = "text/javascript" src = "js/jspdf.min.js"></script>
+        <script type = "text/javascript" src = "js/html2canvas.min.js"></script>
+        <script type = "text/javascript" src = "js/youtube_api.js"></script>
+        <script type = "text/javascript" src = "js/youtube_api2.js"></script>
+        <link rel="stylesheet" href="css/popup.css" type="text/css">
+    </head>
+    <body id = "body_1">
+        <div id="playBtn">
+            <input type="image" src="image/playBtn.jfif" class="playImg" title="노트START">
+        </div>
+        <div id='main_body'>
+            <div id='player'></div>
+            <div id="note_memo_main" class="note_memo_main_css">
+                <form id="note_body" class="note_body_css" contenteditable="true">
+                </form>
+            </div>
+    
+            <div id="note_memo_btns" class="note_memo_btns_css">
+                <input id="save_btn" type="image" src="image/save.png" class="img_top" title="저장(Ctrl+q)">                       
+                <input id="delete_btn" type="image" src="image/delete.png" class="img" title="삭제(Ctrl+d)">         
+                <input id="capture_btn" type="image" src="image/capture.png" class="img" title="캡처(Ctrl+)">       
+                <input id="exit_btn" type="image" src="image/exit.png" class="img_close" title="닫기">         
+                
+            </div>
+            <div id="dataSizeForm">
+                <b>최대 저장가능 메모리는 5MB입니다. 100%가 되면 저장후 진행해주세요. </b>
+                <input type="text" id="dataSize"/>
+            </div>
+            <div id='painting' class="painting wrap">
+                <canvas id="jsCanvas" class="canvas"></canvas>
+                <div class="controls">
+                    <div class="controls_range">
+                        <input type="range" id="jsRange" min="0.1" max="5.0" value="2.5" step="0.1" />
+                    </div>
+                    <div class="controls_btns">
+                        <button id="jsMode">Fill</button>
+                        <button id="jsSave">Save</button>
+                    </div>
+                        <div class="controls_colors" id="jsColors">
+                        <div class="controls_color jsColor" style="background-color: #2c2c2c;"></div>
+                        <div class="controls_color jsColor" style="background-color: white;"></div>
+                        <div class="controls_color jsColor" style="background-color: #FF3B30;"></div>
+                        <div class="controls_color jsColor" style="background-color: #ff9500;"></div>
+                        <div class="controls_color jsColor" style="background-color: #4cd963;"></div>
+                        <div class="controls_color jsColor" style="background-color: #5ac8fa;"></div>
+                        <div class="controls_color jsColor" style="background-color: #0579ff;"></div>
+                        <div class="controls_color jsColor" style="background-color: #5856d6;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="js/app.js"></script>
+    <script src="js/popup.js"></script>
+</html>

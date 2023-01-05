@@ -1,0 +1,37 @@
+{
+  "manifest_version": 2,
+
+  "name": "용길's노트",
+  "description": "유튜브보면서 공부하다가 slid광고보고 가입했는데 유로툴이라 빡쳐서 만들었음",
+  "version": "1.0.0",
+  "author":"박용길",
+  "browser_action": {
+    "default_icon": "image/cromeNote.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "tabCapture",
+    "desktopCapture",
+    "declarativeContent",
+    "background",
+    "storage",
+    "<all_urls>",
+    "https://www.youtube.com",
+    "https://s.ytimg.com"   
+  ],
+  "options_page": "index.html",
+  "options_ui": {
+    "page": "index.html",
+    "open_in_tab": false,
+    "chrome_style": true
+  },
+  "landing-pages": [{
+    "path": "index.html",
+    "content-security-policy-type": "custom",
+    "content_security_policy": 
+    "script-src 'self' https://www.youtube.com/player_api https://s.ytimg.com/yt/jsbin/www-widgetapi-vfl9Ni0ki.js; object-src 'self'"
+  }]
+}
+
